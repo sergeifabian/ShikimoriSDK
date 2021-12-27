@@ -11,7 +11,7 @@ extension JSONEncoder {
     
     static var `default`: JSONEncoder { JSONEncoder() }
     
-    static var backendDecoder: JSONEncoder {
+    static var backendEncoder: JSONEncoder {
         let encoder = Self.default
         encoder.keyEncodingStrategy = .convertToSnakeCase
         return encoder

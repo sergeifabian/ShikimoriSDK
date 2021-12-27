@@ -28,9 +28,9 @@ enum AccessTokenTarget: SubTarget {
     var task: Task {
         switch self {
         case .fetchAccessToken(let parameters):
-            return .requestCustomJSONEncodable(parameters, encoder: .backendDecoder)
+            return .requestCustomJSONEncodable(parameters, encoder: .backendEncoder)
         case .refreshAccessToken(let parameters):
-            return .requestCustomJSONEncodable(parameters, encoder: .backendDecoder)
+            return .requestCustomJSONEncodable(parameters, encoder: .backendEncoder)
         }
     }
 }
